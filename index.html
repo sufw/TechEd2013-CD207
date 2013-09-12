@@ -108,8 +108,8 @@
 						<p>Ultimately decided on a custom build</p>
 						<p>Stateless Java front-end built on Spring</p>
 					</section>
-					<section data-background="assets/arch_basic.png" data-transition="none">
-
+					<section data-transition="none" data-background="white">
+						<img src="assets/arch_basic.png" style="box-shadow: none; border: none;">
 					</section>
 				</section>
 
@@ -158,8 +158,8 @@
 						<p>&nbsp;</p>
 						<p>To sell the idea, we built a SOAP API in parallel.</p>
 					</section>
-					<section data-transition="none">
-						insert image
+					<section data-transition="none" data-background="white">
+						<img src="assets/parallelApis.png" style="box-shadow: none; border: none;">
 					</section>
 					<section data-transition="none">
 						<p>Abandoned this after ~4 weeks once comfort was built.</p>
@@ -612,7 +612,41 @@ POST customer/42/addresses HTTP/1.1
 						<p>One of the most tangible benefits of the REST style</p>
 					</section>
 					<section data-transition="none">
-						
+						<p>Caching is the <span class="highlight">magic sauce</span> that makes the web run.</p>
+						<p>&nbsp;</p>
+						<p>REST is the web, for machines</p>
+					</section>
+					<section data-transition="none">
+						<p>Think about this from day # 1</p>
+						<p>&nbsp;</p>
+						<p>Let it inform the design of your representations</p>
+					</section>
+					<section data-transition="none">
+						<h3>Some Tips</h3>
+						<ol>
+							<li>Server-side caches</li>
+							<li>Segregate private and public data into different resources</li>
+							<li>Avoid multiple views of the same representation</li>
+							<li>Client-side caches</li>
+						</ol>
+					</section>
+					<section data-transition="none">
+						<img src="assets/arch_basic.png">
+					</section>
+					<section data-transition="fade">
+						<img src="assets/arch_icm.png">
+					</section>
+					<section data-transition="fade">
+						<img src="assets/arch_ehcache.png">
+					</section>
+					<section data-transition="fade">
+						<h3>Our Strategy</h3>
+						<p style="float: left;">SAP <span class="highlight">ICM</span> Cache for long-lived static content</p>
+						<p style="float: left;"><span class="highlight">Ehcache</span> for session-based caching.</p>
+						<ul>
+							<li>Defined triggers in the app which flushed the session cache</li>
+							<li>e.g. after payment of an invoice, etc.</li>
+						</ul>
 					</section>
 				</section>
 
@@ -693,6 +727,7 @@ POST customer/42/addresses HTTP/1.1
 						<h3>Read Applicable RFCs</h3>
 						<p align="left"><a href="http://tools.ietf.org/html/rfc2616">RFC 2616</a> (HTTP/1.1)</p>
 						<p align="left"><a href="http://tools.ietf.org/html/rfc5988">RFC 5988</a> and <a href="http://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA Link Relations</a></p>
+						<p align="left"><a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">Roy's canonical thesis</a></p>
 						<p align="left"><a href="http://www.iana.org/assignments/media-types">IANA MIME Type Register</a></p>
 						<p align="left"><a href="http://jsonn.org">JSON.org</a>, <a href="http://json-ld.org/">JSON-LD</a>, <a href="http://stateless.co/hal_specification.html">HAL</a>, etc...</p>
 					</section>
