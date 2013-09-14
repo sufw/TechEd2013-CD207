@@ -73,8 +73,15 @@
 						</div>
 					</section>
 					<section data-transition="fade">
-						<h2>Custodio de Oliveira</h2>
-						<p>Great ABAP Engineer</p>
+						<a href="https://www.linkedin.com/in/custodiodeoliveira"><h2>Custodio de Oliveira</h2></a>
+						<div style="text-align: left; align: left; width: 50%; float: left;">
+							<p>Great ABAP Engineer</p>
+							<p>Focus: WDA, ABAP OO, BRF+, clean code</p>
+							
+						</div>
+						<div style="width: 50%; float: left;">
+							<img src=""/>
+						</div>
 					</section>
 				</section>
 
@@ -108,8 +115,11 @@
 						<p>Ultimately decided on a custom build</p>
 						<p>Stateless Java front-end built on Spring</p>
 					</section>
-					<section data-transition="none" data-background="white">
-						<img src="assets/arch_basic.png" style="box-shadow: none; border: none;">
+					<section data-transition="none">
+						<img src="assets/arch_basic.png">
+					</section>
+					<section data-transition="none">
+						<img src="assets/mba.png"/>
 					</section>
 				</section>
 
@@ -141,6 +151,8 @@
 					</table>
 				</section>
 
+
+
 				<section data-transition="cube">
 					<h2>What did we Learn?</h2>
 				</section>
@@ -158,8 +170,8 @@
 						<p>&nbsp;</p>
 						<p>To sell the idea, we built a SOAP API in parallel.</p>
 					</section>
-					<section data-transition="none" data-background="white">
-						<img src="assets/parallelApis.png" style="box-shadow: none; border: none;">
+					<section data-transition="none">
+						<img src="assets/parallelApis.png">
 					</section>
 					<section data-transition="none">
 						<p>Abandoned this after ~4 weeks once comfort was built.</p>
@@ -180,8 +192,8 @@
 					<section data-transition="none">
 						<img src="assets/mostInterestingMan.jpg" width="400" height="501"/>
 					</section>
-					<section data-transition="none" data-background="yellow">
-						insert image for flow
+					<section data-transition="none">
+						<img src="assets/flow.png">
 					</section>
 					<section data-transition="none">
 						<h2>HATEOAS</h2>
@@ -211,9 +223,6 @@
 					</section>
 				
 
-					<section data-transition="fade">
-						<img src="assets/VersionAllTheThings.jpg" width="400" height="300"/>
-					</section>
 					<section data-transition="none">
 						<p>Put a version ID in the URL somewhere</p>
 						<p>&nbsp;</p>
@@ -262,9 +271,7 @@
 
 				<section>
 					<section data-transition="cube">
-						<div>
-							<h1>#3: <img src="assets/VersionAllTheThings.jpg" width="400" height="300"/></h1>
-						</div>
+						<img src="assets/VersionAllTheThings.jpg" width="400" height="300"/>
 					</section>
 
 
@@ -617,20 +624,6 @@ POST customer/42/addresses HTTP/1.1
 						<p>REST is the web, for machines</p>
 					</section>
 					<section data-transition="none">
-						<p>Think about this from day # 1</p>
-						<p>&nbsp;</p>
-						<p>Let it inform the design of your representations</p>
-					</section>
-					<section data-transition="none">
-						<h3>Some Tips</h3>
-						<ol>
-							<li>Server-side caches</li>
-							<li>Segregate private and public data into different resources</li>
-							<li>Avoid multiple views of the same representation</li>
-							<li>Client-side caches</li>
-						</ol>
-					</section>
-					<section data-transition="none">
 						<img src="assets/arch_basic.png">
 					</section>
 					<section data-transition="fade">
@@ -647,6 +640,30 @@ POST customer/42/addresses HTTP/1.1
 							<li>Defined triggers in the app which flushed the session cache</li>
 							<li>e.g. after payment of an invoice, etc.</li>
 						</ul>
+					</section>
+					<section data-transition="none">
+						<p>Think about this from day # 1</p>
+						<p>&nbsp;</p>
+						<p>Let it inform the design of your representations</p>
+					</section>
+					<section data-transition="none">
+						<h3>Some Tips</h3>
+						<ol>
+							<li>Server-side caches</li>
+							<li>Segregate private and public data into different resources</li>
+							<li>Avoid multiple views of the same representation</li>
+							<li>Client-side caches</li>
+							<li>Work with the business to accept 'stale' content</li>
+						</ol>
+					</section>
+					<section data-transition="none">
+						<h3>Pagination</h3>
+						<p>We decided not to do pagination</p>
+					</section>
+					<section data-transition="none">
+						<p>"GET items 250...300"-type queries are inefficient in ABAP</p>
+						<p>API returned full list of results; cached in Ehcache</p>
+						<p>Client app then paginated through cache content</p>
 					</section>
 				</section>
 
@@ -759,9 +776,42 @@ POST customer/42/addresses HTTP/1.1
 
 
 					<section data-transition="fade">
-						
+						<p>Get involved in client development</p>
+						<p>Helps you build a better API</p>
 					</section>
 					<section data-transition="none">
+						<h3>In Our Case...</h3>
+					</section>
+					<section data-transition="none">
+						<h3>Automated Testing</h3>
+						<p>Use stubs for isolation</p>
+						<p>Helps communication and coordination</p>
+					</section>
+					<section data-transition="none">
+						<h3>Reality Checks</h3>
+						<p>Build APIs which are usable</p>
+						<p>Avoid flights of fancy</p>
+						<p>&nbsp;</p>
+						<p>"Why don't we implement _________?"</p>
+					</section>
+					<section data-transition="none">
+						<h3>Abstraction</h3>
+						<p>Working with non-SAP developers helps to avoid SAPinese</p>
+						<p>&nbsp;</p>
+						<table>
+							<tr>
+								<td><span class="strike">WERKS</span>:&nbsp;</td><td>Warehouse | Store | Factory</td>
+							</tr>
+							<tr>
+								<td><span class="strike">KUNNR</span>:&nbsp;</td><td>Customer ID</td>
+							</tr>
+							<tr>
+								<td><span class="strike">000000000042</span>:&nbsp;</td><td>42</td>
+							</tr>
+							<tr>
+								<td><span class="strike">X</span>:&nbsp;</td><td>true</td>
+							</tr>
+						</table>
 						
 					</section>
 				</section>
@@ -802,12 +852,20 @@ POST customer/42/addresses HTTP/1.1
 
 
 
-
+				<section>
+					<h1>Q&amp;A</h1>
+					<p>&nbsp;</p>
+					<p>Thank you very much!</p>
+					<p>&nbsp;</p>
+					<p>Tweet us at <a href="http://twitter.com/sufw">@sufw</a> and <a href="http://twitter.com/zcust01">@zcust01</a></p>
+				</section>
 
 
 
 				<section>
 					<h3>Thank you for the Photos!</h3>
+					<p><small><a href="http://www.flickr.com/photos/leshaines123/4938621867">Red Letter Box, by Les Haines</a></small></p>
+					<p><small><a href="http://geekandpoke.typepad.com/geekandpoke/2008/07/its-a-soa.html">"It's a SOA", by Oliver Widder (Geek and Poke)</a></small></p>
 					<p><small><a href="http://www.flickr.com/photos/80497449@N04/7417267034">Nuclear Burst Grunge Flags, by Nicolas Raymond</a></small></p>
 					<p><small><a href="http://www.flickr.com/photos/girliemac/sets/72157628409467125">HTTP Status Cats, by GirlieMac</a></small></p>
 					<p><small><a href="http://www.flickr.com/photos/rifqidahlgren/7962362858/">Go Player, by Peter Dahlgren</a></small></p>
@@ -815,6 +873,7 @@ POST customer/42/addresses HTTP/1.1
 
 
 				<!-- Standard template content below -->
+				<!--
 
 				<section>
 					<h2>Marvelous Unordered List</h2>
@@ -1046,6 +1105,8 @@ function linkify( selector ) {
 					<h1>THE END</h1>
 					<h3>BY Hakim El Hattab / hakim.se</h3>
 				</section>
+
+			-->
 
 			</div>
 
