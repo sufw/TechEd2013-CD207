@@ -224,25 +224,9 @@
 				
 
 					<section data-transition="none">
-						<p>Put a version ID in the URL somewhere</p>
-						<p>&nbsp;</p>
-						<p>http://myerp.acme.com/api/<span class="highlight">v1</span>/customer/42</p>
-						<p>http://<span class="highlight">v1</span>.api.myerp.acme.com/customer/42</p>
-					</section>
-					<section data-transition="none">
 						<a href="https://twitter.com/fielding/status/376835835670167552">
 							<img src="assets/RoyOnVersions.png" width="557" height="356"/>
 						</a>
-					</section>
-					<section data-transition="none">
-						<p>Purists might prefer header-based versioning...</p>
-						<pre><code data-trim>
-&gt;&gt;&gt; GET http://api.acme.com/customer/42 HTTP/1.1
-&gt;&gt;&gt; Accept: application/vnd.acme.com.customer+json;v=2,application/json;q=0.5
-
-&lt;&lt;&lt; 200 OK
-&lt;&lt;&lt; Content-Type: application/vnd.acme.com.customer;v=1
-						</code></pre>
 					</section>
 					<section data-background="assets/7417267034_62252ef809_h.jpg" data-transition="none">
 						<p>Yes, it's the <strong>nuclear option</strong></p>
@@ -254,6 +238,22 @@
 							<li>Consumers we control</li>
 							<li>Limited lifetime</li>
 						<ul>
+					</section>
+					<section data-transition="none">
+						<p>Put a version ID in the URL somewhere</p>
+						<p>&nbsp;</p>
+						<p>http://myerp.acme.com/api/<span class="highlight">v1</span>/customer/42</p>
+						<p>http://<span class="highlight">v1</span>.api.myerp.acme.com/customer/42</p>
+					</section>
+					<section data-transition="none">
+						<p>Purists might prefer header-based versioning...</p>
+						<pre><code data-trim>
+&gt;&gt;&gt; GET http://api.acme.com/customer/42 HTTP/1.1
+&gt;&gt;&gt; Accept: application/vnd.acme.com.customer+json;v=2,application/json;q=0.5
+
+&lt;&lt;&lt; 200 OK
+&lt;&lt;&lt; Content-Type: application/vnd.acme.com.customer;v=1
+						</code></pre>
 					</section>
 					<section data-transition="none">
 						<h3>K.I.S.S.</h3>
