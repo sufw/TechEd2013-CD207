@@ -74,8 +74,8 @@
 					<section data-transition="fade">
 						<a href="http://scn.sap.com/people/custodio.deoliveira/profile"><h2>Custodio de Oliveira</h2></a>
 						<div style="text-align: left; align: left; width: 50%; float: left;">
-							<p>SAP <a href="http://manifesto.softwarecraftsmanship.org/">Software Craftsman</a></p>
 							<p>Focus: Clean code, ABAP OO, WDA/FPM, BRF+</p>
+							<p>SAP <a href="http://manifesto.softwarecraftsmanship.org/">Software Craftsman</a></p>
 							<p>Interested in Mobile, HANA (brainwashed by SAP Marketing)</p>
 							<p>Do, or do not. There's no try.</p>
 						</div>
@@ -674,7 +674,6 @@ POST customer/42/addresses HTTP/1.1
 						<h1>#8: Meaningful Response Codes</h1>
 					</section>
 
-
 					<section data-transition="fade">
 						<p>HTTP is an <span class="highlight">Application</span> Protocol.</p>
 						<p>Use the rich list of <a href="http://en.wikipedia.org/wiki/List_of_http_status_codes">Status Codes</a> for signalling</p>
@@ -682,6 +681,100 @@ POST customer/42/addresses HTTP/1.1
 						<p><small>And then there's the <a href="https://github.com/joho/7XX-rfc">7xx</a> codes ;-)</small></p>
 					</section>
 					<section data-transition="none">
+						<p>There's 78 of them on <a href="http://en.wikipedia.org/wiki/List_of_http_status_codes">Wikipedia</a></p>
+						<p>&nbsp;</p>
+						<p>Don't reinvent the wheel.</p>
+					</section>
+
+					<section data-transition="none">
+						<h2>Back to our customer</h2>
+						<p>We want to see the list of invoices</p>
+						<p>&nbsp;</p>
+						<pre><code data-trim>
+GET customer/42/invoices HTTP/1.1
+						</code></pre>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p class="fragment">But there isn't any...</p>
+						
+					</section>	
+					
+					
+					<section data-transition="none">
+						<h3>What would <p><span class="strike"><span class="strike"><a href="http://www.youtube.com/watch?v=7jqx-YeLP7Y">Marilyn Pratt</a></span> </p><span class="strike"><a href="http://www.youtube.com/watch?v=5FC1yTKvAGQ">Brian Boitano</a></span><p> you do? </h3>
+						
+					</section>						
+					
+						<section data-transition="none">	
+						
+						<div style="width: 25%; float: left;">
+							<img src="assets/200.jpg"/>
+						</div>
+						
+						<div style="width: 25%; float: left;">
+							<img src="assets/204.jpg"/>
+						</div>
+						
+						<div style="width: 25%; float: left;">
+							<img src="assets/404.jpg"/>
+						</div>
+						
+						<div style="width: 25%; float: left;">
+							<img src="assets/744.jpg"/>
+						</div>
+						</section>
+						
+						<section data-transition="none">	
+						
+						<div style="width: 33%; float: left;">
+							<img src="assets/200.jpg"/>
+						</div>
+						
+						<div style="width: 33%; float: left;">
+							<img src="assets/204.jpg"/>
+						</div>
+						
+						<div style="width: 33%; float: left;">
+							<img src="assets/404.jpg"/>
+						</div>
+						
+						</section>						
+						
+						
+						<section data-transition="none">	
+						
+						<div style="width: 50%; float: left;">
+							<img src="assets/200.jpg"/>
+						</div>
+						
+						<div style="width: 50%; float: left;">
+							<img src="assets/204.jpg"/>
+						</div>						
+						</section>
+						
+						<section data-transition="none">	
+						
+							<img src="assets/200.jpg"  width="462" height="369"/>
+						<pre><code data-trim>
+   
+{
+    "invoices": [],
+    "_links": {
+        "self": "/customer/42/invoices",
+        "parent": "/customer/42"
+    }
+}
+						</code></pre>
+					</section>	
+						<section data-transition="none">	
+							<img src="assets/204.jpg" width="462" height="369"/>
+						</section>				
+
+					<section data-transition="none">
+						<h1>#8: Meaningful and Consistent Response Codes</h1>
+					</section>
+						
+					<!-- <section data-transition="none">
 						<img src="assets/200.jpg">
 					</section>
 					<section data-transition="none">
@@ -695,12 +788,8 @@ POST customer/42/addresses HTTP/1.1
 					</section>
 					<section data-transition="none">
 						<img src="assets/418.jpg">
-					</section>
-					<section data-transition="none">
-						<p>There's 78 of them on <a href="http://en.wikipedia.org/wiki/List_of_http_status_codes">Wikipedia</a></p>
-						<p>&nbsp;</p>
-						<p>Don't reinvent the wheel.</p>
-					</section>
+					</section> -->					
+					
 				</section>
 
 
@@ -753,7 +842,8 @@ POST customer/42/addresses HTTP/1.1
 						<p align="left"><a href="http://www.infoq.com/rest">InfoQ</a></p>
 						<p align="left">Apigee Best Practices <a href="http://apigee.com/about/content/web-api-design">eBook</a> and <a href="http://blog.apigee.com/">blog</a></p>
 						<p align="left">Blogs by <a href="http://dret.typepad.com/">Erik Wilde</a>, <a href="http://www.mnot.net/blog/">Mark Nottingham</a> or <a href="http://www.stucharlton.com/blog/">Stu Charlton</a></p>
-						<p align="left">The Yahoo <a href="http://groups.yahoo.com/neo/groups/rest-discuss/info">rest-discuss</a> group</p>
+						<p align="left">The Yahoo <a href="http://groups.yahoo.com/neo/groups/rest-discuss/info">rest-discuss</a> group </p>
+						<p align="left"><a href="http://scn.sap.com/community/abap/connectivity/blog/2013/05/16/usage-of-the-abap-rest-library-sapbasis-740">New ABAP REST Library</a> on SCN</p>
 						<p align="left">etc.</p>
 					</section>
 					<section data-transition="none">
@@ -809,7 +899,7 @@ POST customer/42/addresses HTTP/1.1
 								<td><span class="strike">KUNNR</span>:&nbsp;</td><td>Customer ID</td>
 							</tr>
 							<tr>
-								<td><span class="strike">000000000042</span>:&nbsp;</td><td>42</td>
+								<td><span class="strike">0000000042</span>:&nbsp;</td><td>42</td>
 							</tr>
 							<tr>
 								<td><span class="strike">X</span>:&nbsp;</td><td>true</td>
