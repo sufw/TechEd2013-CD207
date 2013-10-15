@@ -425,7 +425,8 @@ GET customer/42 HTTP/1.1
 						</code></pre><pre><code data-trim>
 { "_id": "42", "_rev": "12-eee8f9c6b8a9477b9eb4954c2b00acf9",
   "name": { "firstname": "Joe", "lastname": "Bloggs",
-  "_links": {"self": "/customer/42/name"}},
+            "_links": {"self": "/customer/42/name"}
+  },
   "addresses": [ 
     { "_id": "1", "_rev": "...", 
       "type": "mail", "city": "Richmond", "street": "...",
@@ -438,8 +439,7 @@ GET customer/42 HTTP/1.1
   "_links": { 
     "self": "/customer/42",
     "http://rel.acme.com/addresses": "/customer/42/addresses"
-  }
-}
+  }}
 						</code></pre>
 					</section>
 					<section data-transition="none">
@@ -961,9 +961,9 @@ GET customer/42/invoices HTTP/1.1
 				<section>
 					<h1>Q&amp;A</h1>
 					<p>&nbsp;</p>
-					<p>Thank you very much!</p>
-					<p>&nbsp;</p>
 					<p>Tweet us at <a href="http://twitter.com/sufw">@sufw</a> and <a href="http://twitter.com/zcust01">@zcust01</a></p>
+					<p>&nbsp;</p>
+					<p>The slides are here: <a href="http://slides.bluet.com.au/cd207">http://slides.bluet.com.au/cd207</a></p>
 				</section>
 
 
